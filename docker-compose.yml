@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  backend:
+    image: lemraus/news-app-backend:latest
+    container_name: news-app-backend
+    expose: 
+      - 5000
+    ports: 
+      - 5000:5000
+    environment:
+      - FLASK_ENV=production
+      - FLASK_APP=app.py
+      - FLASK_DEBUG=0
+
+  frontend:
+    image: lemraus/news-app-frontend:latest
+    container_name: news-app-frontend
+    expose: 
+      - 3000
+    ports: 
+      - 3000:3000
