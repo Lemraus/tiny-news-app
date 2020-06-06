@@ -23,7 +23,7 @@ computer, as well as Docker Compose.
 In order to install the app, clone this repository by entering the following
 command in your terminal:
 
-    git clone git@github.com:Lemraus/tiny-news-app.git
+    git clone https://github.com/Lemraus/tiny-news-app.git
 
 then type:
 
