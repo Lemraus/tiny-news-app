@@ -6,8 +6,6 @@ services:
     container_name: news-app-backend
     expose: 
       - 5000
-    ports: 
-      - 5000:5000
     environment:
       - FLASK_ENV=production
       - FLASK_APP=app.py
@@ -18,5 +16,11 @@ services:
     container_name: news-app-frontend
     expose: 
       - 3000
-    ports: 
-      - 3000:3000
+
+  nginx:
+    image: lemraus/news-app-nginx:latest
+    container_name: news-app-nginx
+    expose:
+      - 80
+    ports:
+      - 8080:80
